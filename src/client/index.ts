@@ -21,6 +21,7 @@ export const client = getClient<
 });
 
 export function serverClient(req: IncomingMessage) {
+  console.log("LOGTEST", req);
   return getClient<GeneratedSchema, SchemaObjectTypesNames, SchemaObjectTypes>({
     schema: generatedSchema,
     scalarsEnumsHash,
